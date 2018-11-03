@@ -16,7 +16,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
 	private static final long serialVersionUID = 1L;
 	private static int WIDTH = 140;
-	private static int HEIGHT = 120;
+	private static int HEIGHT = 170;
 	private static int SCALE = 3;
 	private boolean isRunning;
 
@@ -33,14 +33,14 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
 		player = new Player((WIDTH/2)-15, HEIGHT - 5, 40, 5);
 		enemy = new Enemy((WIDTH/2)-15, 0, 40, 5, 1.0);
-		ball = new Ball((WIDTH/2)-1, (HEIGHT / 2) - 1, 4, 4, 2.2);
+		ball = new Ball((WIDTH/2)-1, ((int)(HEIGHT * 0.1)) - 1, 4, 4, 2.2);
 
 	}
 
 	public static void main(String[] args) {
 
 		Game game = new Game();
-		JFrame frame = new JFrame("Game-Pong by Thyago Mac v0.2.4");
+		JFrame frame = new JFrame("Game-Pong by Thyago Mac v0.2.5");
 		// Impede o redimencionamento da tela
 		frame.setResizable(false);
 		// Fecha a tela no X
